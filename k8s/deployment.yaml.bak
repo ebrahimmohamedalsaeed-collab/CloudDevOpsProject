@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: finalproject
-          image: ebrahimrhh/finalproject:v1
+          image: ebrahimmrhh/finalproject:v1
           ports:
             - containerPort: 80
 
