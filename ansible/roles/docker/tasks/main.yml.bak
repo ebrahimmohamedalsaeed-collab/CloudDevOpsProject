@@ -1,0 +1,44 @@
+---
+- name: Install dependencies for Docker
+  apt:
+    name:
+      - apt-transport-https
+      - ca-certificates
+      - gnupg
+      - lsb-release
+    state: present
+
+- name: Add Docker GPG key
+  apt_key:
+    url: https://download.docker.com/linux/ubuntu/gpg
+    state: present
+
+- name: Add Docker repo
+  apt_repository:
+    repo: "deb [arch=amd64] https://download.docker.com/linux/ubuntu {{ ansible_distribution_release }} stable"
+    state: present
+
+- name: Install Docker CE (if apt repo works)
+  apt:
+    name:
+      - docker-ce
+      - docker-ce-cli
+      - containerd.io
+    state: present
+    update_cache: yes
+  register: docker_install
+  failed_when: false
+
+- name: Ensure docker service is running (if installed)
+  service:
+    name: docker
+    state: started
+    enabled: yes
+  when: docker_install is succeeded
+
+- name: Add deploy user to docker group (if deploy_user exists)
+  when: deploy_user != ""
+  user:
+    name: "{{ deploy_user }}"
+    groups: docker
+    append: yes

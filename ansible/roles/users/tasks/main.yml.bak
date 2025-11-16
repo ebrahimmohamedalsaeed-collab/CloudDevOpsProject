@@ -1,0 +1,23 @@
+---
+- name: Ensure deploy user exists (skip if deploy_user is empty)
+  when: deploy_user != ""
+  user:
+    name: "{{ deploy_user }}"
+    shell: /bin/bash
+    create_home: yes
+    state: present
+    groups: sudo
+
+- name: Set authorized key for deploy user (if provided)
+  when: deploy_user_pubkey != ""
+  authorized_key:
+    user: "{{ deploy_user }}"
+    state: present
+    key: "{{ deploy_user_pubkey }}"
+
+- name: Allow passwordless sudo for deploy user (if created)
+  when: deploy_user != ""
+  copy:
+    dest: "/etc/sudoers.d/{{ deploy_user }}"
+    content: "{{ deploy_user }} ALL=(ALL) NOPASSWD:ALL\n"
+    mode: '0440'

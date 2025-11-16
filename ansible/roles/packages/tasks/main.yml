@@ -1,0 +1,9 @@
+---
+- name: Install useful packages
+  apt:
+    name:
+      - htop
+      - unzip
+      - jq
+    state: present
+    update_cache: yes

@@ -1,0 +1,55 @@
+---
+- name: Create app directory
+  file:
+    path: /opt/sample_app
+    state: directory
+    owner: "{{ deploy_user if deploy_user != '' else ansible_user_id }}"
+    group: "{{ deploy_user if deploy_user != '' else ansible_user_id }}"
+    mode: '0755'
+
+- name: Copy sample app
+  copy:
+    src: files/sample_app.py
+    dest: /opt/sample_app/sample_app.py
+    owner: "{{ deploy_user if deploy_user != '' else ansible_user_id }}"
+    group: "{{ deploy_user if deploy_user != '' else ansible_user_id }}"
+    mode: '0755'
+
+- name: Create virtualenv
+  command: python3 -m venv /opt/sample_app/venv
+  args:
+    creates: /opt/sample_app/venv
+
+- name: Install pip into venv (ensure pip exists)
+  pip:
+    virtualenv: /opt/sample_app/venv
+    name:
+      - pip
+
+- name: Create systemd service for app
+  copy:
+    dest: /etc/systemd/system/sample_app.service
+    content: |
+      [Unit]
+      Description=Sample Python App
+      After=network.target
+
+      [Service]
+      User={{ deploy_user if deploy_user != '' else ansible_user_id }}
+      WorkingDirectory=/opt/sample_app
+      ExecStart=/opt/sample_app/venv/bin/python /opt/sample_app/sample_app.py
+      Restart=always
+
+      [Install]
+      WantedBy=multi-user.target
+    mode: '0644'
+
+- name: Reload systemd
+  systemd:
+    daemon_reload: yes
+
+- name: Ensure sample app is started and enabled
+  service:
+    name: sample_app
+    state: started
+    enabled: yes

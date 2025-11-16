@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: finalproject
+  namespace: ivolve
+  labels:
+    app: finalproject
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: finalproject
+  template:
+    metadata:
+      labels:
+        app: finalproject
+    spec:
+      containers:
+        - name: finalproject
+          image: ebrahimmrhh/finalproject:v1
+          ports:
+            - containerPort: 80
+

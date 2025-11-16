@@ -1,0 +1,10 @@
+---
+- name: Full setup (bootstrap -> packages -> docker -> app)
+  hosts: dev
+  become: yes
+  roles:
+    - common
+    - users
+    - packages
+    - docker
+    - app
