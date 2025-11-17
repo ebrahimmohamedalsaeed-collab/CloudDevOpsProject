@@ -9,13 +9,15 @@ The workflow runs automatically whenever code is pushed to the main branch.
 ## Infra of Githubaction
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/.github/workflows/screenshots/diagram-export-17-11-2025-11_24_17.png" width="100%">
+  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/.github/workflows/screenshots/diagram-export-17-11-2025-11_24_17.png" width="80%">
 </p>
-
 
 ![Workflow Screenshot 384](https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/.github/workflows/screenshots/Screenshot%20(384).png)
 
 ![Workflow Screenshot 385](https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/.github/workflows/screenshots/Screenshot%20(385).png)
+
+
+
 
 
 #🧩 Summary
