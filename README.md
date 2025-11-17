@@ -109,18 +109,6 @@ Everything is automated using Terraform, Kubernetes, ArgoCD, GitHub Actions, Ans
 - Fully structured Kubernetes manifests using Kustomize (base + overlays/dev).
 ```
 
-### 🏁 Project Outcomes
-```
-- Delivered a production-ready Kubernetes platform running on AWS EKS.
-- Achieved complete automation across infrastructure, CI/CD, and deployments.
-- Implemented a secure image supply chain using ECR +  GitHub Actions.
-- Ensured consistent deployments using GitOps principles with ArgoCD.
-- Improved scalability and reliability of workloads using Kubernetes native capabilities.
-- Enhanced security and infrastructure governance through IAM-based resource access.
-- Reduced operational overhead by utilizing AWS-native monitoring via CloudWatch.
-- Established a clean, modular, and enterprise-grade repository structure.
-- Enabled future environment expansion (prod, staging) via Terraform and Kustomize.
-- Created a real-world, portfolio-grade end-to-end DevOps solution.
-```
+
 
 
