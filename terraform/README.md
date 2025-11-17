@@ -110,6 +110,25 @@ Defines S3 bucket for Terraform remote state.
 dynamodb.tf
 Defines DynamoDB table for state locking to prevent race conditions.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/terraform/screenshots/Screenshot%20(337).png" width="30%">
+  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/terraform/screenshots/Screenshot%20(338).png" width="30%">
+  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/terraform/screenshots/Screenshot%20(339).png" width="30%">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/terraform/screenshots/Screenshot%20(340).png" width="30%">
+  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/terraform/screenshots/Screenshot%20(341).png" width="30%">
+  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/terraform/screenshots/Screenshot%20(345).png" width="30%">
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/terraform/screenshots/Screenshot%20(347).png" width="30%">
+  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/terraform/screenshots/Screenshot%20(348).png" width="30%">
+  <img src="https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/terraform/screenshots/Screenshot%20(349).png" width="30%">
+</p>
+
+
 ## 🔎 AWS CloudWatch (Monitoring & Observability)
 
 ### 📌 Overview
