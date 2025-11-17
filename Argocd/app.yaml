@@ -9,7 +9,7 @@ spec:
   source:
     repoURL: https://github.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject.git
     targetRevision: main
-    path: k8s/overlays/dev
+    path: k8s
 
   destination:
     name: ''
