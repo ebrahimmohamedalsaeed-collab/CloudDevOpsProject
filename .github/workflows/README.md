@@ -5,6 +5,9 @@
 This project uses GitHub Actions to automate a full CI/CD pipeline that builds a Docker image, pushes it to Amazon Elastic Container Registry (ECR), and deploys it to AWS EKS.
 
 The workflow runs automatically whenever code is pushed to the main branch.
+## Ecr 
+![Screenshot](https://github.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/blob/main/.github/workflows/screenshots/Screenshot%20(398).png?raw=true)
+
 
 ## Infra of Githubaction
 
