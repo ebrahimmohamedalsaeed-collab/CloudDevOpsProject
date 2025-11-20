@@ -20,7 +20,8 @@ Everything is automated using Terraform, Kubernetes, ArgoCD, GitHub Actions, Ans
 
 ## Infra of CloudDevproject 
 
-![Cloud Dev](https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/screenshots/Clouddev.png)
+![CloudDevOps Architecture](https://raw.githubusercontent.com/ebrahimmohamedalsaeed-collab/CloudDevOpsProject/main/screenshots/clouddev2.png)
+
 
 ## 🔥 Key Capabilities
 
